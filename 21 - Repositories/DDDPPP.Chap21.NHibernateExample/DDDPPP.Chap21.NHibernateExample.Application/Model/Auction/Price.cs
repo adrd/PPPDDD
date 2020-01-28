@@ -6,7 +6,7 @@ namespace DDDPPP.Chap21.NHibernateExample.Application.Model.Auction
 {
     public class Price : ValueObject<Price>
     {
-        private Price()
+        private Price() // needed by NHibernate
         { }
 
         public Price(Money amount)

@@ -24,7 +24,7 @@ namespace OnlineTakeawayStore.NativeEvents.Application
         public void Confirm(DateTime timeThatPizzaWasDelivered, Guid orderId)
         {
             var order = orderRepository.FindBy(orderId);
-            order.DeliveryGuaranteeFailed += onDeliveryGuaranteeFailed;
+            order.DeliveryGuaranteeFailed += onDeliveryGuaranteeFailed; // tight coupling
             order.ConfirmReceipt(timeThatPizzaWasDelivered);
         }
 

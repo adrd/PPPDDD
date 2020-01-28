@@ -14,14 +14,14 @@ namespace PPPPDDDChap05.DomainModel.Application
         }
 
         public void Bid(Guid auctionId, Guid memberId, decimal amount, DateTime dateOfBid)
-        {                                                        
+        {
             var auction = _auctions.FindBy(auctionId);
 
             var bidAmount = new Money(amount);
 
             var offer = new Bid(memberId, bidAmount, dateOfBid);
 
-            auction.PlaceBidFor(offer, dateOfBid);                                
-         }                      
+            auction.PlaceBidFor(offer, dateOfBid);
+        }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 namespace PPPDDDChap05.DomainModel.Model
 {
-    public class WinningBid 
+    public class WinningBid
     {
         private WinningBid() { }
 
@@ -24,7 +24,7 @@ namespace PPPDDDChap05.DomainModel.Model
             TimeOfBid = timeOfBid;
             CurrentAuctionPrice = new Price(bid);
         }
-        
+
         public Guid AuctionId { get; private set; }
         public Guid Bidder { get; private set; }
         public Money MaximumBid { get; private set; }
@@ -83,7 +83,7 @@ namespace PPPDDDChap05.DomainModel.Model
         }
 
         private WinningBid CreateNewBid(Guid bidder, Money bid, Money maxBid, DateTime timeOfBid)
-        {          
+        {
             return new WinningBid(bidder, bid, maxBid, timeOfBid);
         }
 

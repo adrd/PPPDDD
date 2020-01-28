@@ -46,6 +46,7 @@
     <Compile Include="Insurance\Model\Member.cs" />
     <Compile Include="Insurance\Model\Policy.cs" />
     <Compile Include="Insurance\Model\Quote.cs" />
+    <Compile Include="OnlineGaming\WithDomainServices\Model\Free12MonthSubscriptionForHighScoresReward.cs" />
     <Compile Include="RestaurantBooking\Model\BookingDetails.cs" />
     <Compile Include="RestaurantBooking\Model\Customer.cs" />
     <Compile Include="RestaurantBooking\Model\DomainEvents.cs" />

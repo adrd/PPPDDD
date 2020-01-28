@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PPPDDDChap05.DomainModel.Model
 {
-    public class Money 
+    public class Money
     {
         protected decimal Value { get; set; }
 
@@ -22,9 +22,9 @@ namespace PPPDDDChap05.DomainModel.Model
         private void ThrowExceptionIfNotValid(decimal value)
         {
             if (value % 0.01m != 0)
-                throw new InvalidOperationException("There cannot be more than two decimal places."); 
+                throw new InvalidOperationException("There cannot be more than two decimal places.");
 
-            if(value < 0)
+            if (value < 0)
                 throw new InvalidOperationException("Money cannot be a negative value.");
         }
 

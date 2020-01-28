@@ -2,6 +2,7 @@
 
 namespace DDDPPP.Chap21.NHibernateExample.Application.Model.Auction
 {
+    // this is a domain event
     public class BidPlaced
     {
         public BidPlaced(Guid auctionId, Guid bidderId, Money amountBid, DateTime timeOfBid)

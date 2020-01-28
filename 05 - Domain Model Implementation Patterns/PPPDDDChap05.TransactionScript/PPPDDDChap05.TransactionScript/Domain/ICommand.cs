@@ -8,6 +8,6 @@ namespace PPPDDDChap05.TransactionScript.Domain
 {
     public interface ICommand
     {
-        public void Execute();
+        void Execute();
     }
 }

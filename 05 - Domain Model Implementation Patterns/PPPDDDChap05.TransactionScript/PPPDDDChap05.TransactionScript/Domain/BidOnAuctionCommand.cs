@@ -7,11 +7,11 @@ using System.Transactions;
 
 namespace PPPDDDChap05.TransactionScript.Domain
 {
-    public class BidOnAuctionCommand: ICommand
+    public class BidOnAuctionCommand : ICommand
     {
-        private Guid auctionId {get; set;}
-        private Guid bidderId {get; set;}
-        private decimal amount {get; set;}
+        private Guid auctionId { get; set; }
+        private Guid bidderId { get; set; }
+        private decimal amount { get; set; }
         private DateTime timeOfBid { get; set; }
 
         public BidOnAuctionCommand(Guid auctionId, Guid bidderId, decimal amount, DateTime timeOfBid)
@@ -32,7 +32,7 @@ namespace PPPDDDChap05.TransactionScript.Domain
 
                 if (IsFirstBid(auctionId))
                     PlaceFirstBid(auctionId, bidderId, amount, timeOfBid);
-                else if (IsIncreasingMaximimBid(auctionId, amount, bidderId))
+                else if (IsIncreasingMaximumBid(auctionId, amount, bidderId))
                     IncreaseMaximumBidTo(amount);
                 else if (CanMeetOrExceedBidIncrement(amount))
                     UpdatePrice(auctionId, bidderId, amount, timeOfBid);
@@ -51,15 +51,15 @@ namespace PPPDDDChap05.TransactionScript.Domain
 
         private void UpdatePrice(Guid auctionId, Guid bidderId, decimal amount, DateTime timeOfBi)
         {
-        
+
         }
 
         private void IncreaseMaximumBidTo(decimal amount)
-        { 
-        
+        {
+
         }
 
-        private bool IsIncreasingMaximimBid(Guid auctionId, decimal amount, Guid bidderId)
+        private bool IsIncreasingMaximumBid(Guid auctionId, decimal amount, Guid bidderId)
         {
             return true;
         }
@@ -70,8 +70,8 @@ namespace PPPDDDChap05.TransactionScript.Domain
         }
 
         private void PlaceFirstBid(Guid auctionId, Guid bidderId, decimal amount, DateTime timeOfBid)
-        { 
-        
+        {
+
         }
 
         private void FirstBid(Auction auction, Guid bidderId, decimal amount, DateTime dateOfBid)
@@ -88,7 +88,7 @@ namespace PPPDDDChap05.TransactionScript.Domain
         }
 
         private void ThrowExceptionIfNotValid(Guid auctionId, Guid bidderId, decimal amount, DateTime dateOfBid)
-        { 
+        {
             if (auctionId == Guid.Empty)
                 throw new ArgumentNullException("AuctionId cannot be null");
 
@@ -110,7 +110,7 @@ namespace PPPDDDChap05.TransactionScript.Domain
             if (currentAuctionWinningBid >= 0.01m && currentAuctionWinningBid <= 0.99m)
                 return 0.05m;
 
-            if (currentAuctionWinningBid >= 1.00m  && currentAuctionWinningBid <= 4.99m)
+            if (currentAuctionWinningBid >= 1.00m && currentAuctionWinningBid <= 4.99m)
                 return 0.20m;
 
             if (currentAuctionWinningBid >= 5.00m && currentAuctionWinningBid >= 14.99m)

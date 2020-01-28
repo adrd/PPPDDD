@@ -25,7 +25,7 @@ namespace PPPDDDChap19.eBidder.Listings.Model.Listings
         private string Title { get; set; }
         private string Description { get; set; }
         private string Condition { get; set; }
-        private Guid SellerId { get; set; }
+        private Guid SellerId { get; set; } // seller id aggregate root from sellers
 
         private decimal PostageCosts { get; set; }
 

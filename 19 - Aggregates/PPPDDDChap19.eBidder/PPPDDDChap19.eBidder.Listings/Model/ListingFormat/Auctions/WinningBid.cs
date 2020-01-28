@@ -25,7 +25,7 @@ namespace PPPDDDChap19.eBidder.Listings.Model.Auctions
             CurrentAuctionPrice = new Price(bid);
         }
         
-        public Guid Bidder { get; private set; }
+        public Guid Bidder { get; private set; } // bidder is member id aggregate root
         public Money MaximumBid { get; private set; }
         public DateTime TimeOfBid { get; private set; }
         public Price CurrentAuctionPrice { get; private set; }

@@ -7,7 +7,7 @@ namespace DDDPPP.Chap21.NHibernateExample.Application.Model.BidHistory
 {
     public class Bid : ValueObject<Bid>
     {
-        private Bid()
+        private Bid() // needed by NHibernate
         { }
 
         public Bid(Guid auctionId, Guid bidderId, Money amountBid, DateTime timeOfBid)
@@ -34,7 +34,7 @@ namespace DDDPPP.Chap21.NHibernateExample.Application.Model.BidHistory
         public Guid Bidder { get; private set; }
         public Money AmountBid {get; private set;}
         public DateTime TimeOfBid { get; private set; }
-        private Guid Id { get; set; }
+        private Guid Id { get; set; } // needed by NHibernate, used to persist data model
 
         protected override IEnumerable<object> GetAttributesToIncludeInEqualityCheck()
         {

@@ -13,7 +13,7 @@ namespace OnlineTakeawayStore.NativeEvents.Model
         private DateTime TimeOfOrderBeingPlaced { get; set; }
         private DateTime TimeThatPizzaWasDelivered { get; set; }
         private FoodDeliveryOrderSteps Status { get; set; }
-        private IDeliveryGuaranteeOffer DeliveryGuaranteeOffer { get; set; }
+        private IDeliveryGuaranteeOffer DeliveryGuaranteeOffer { get; set; } // this is equivalent of domain service ???
 
         public delegate void DeliveryGuaranteeFailedHandler(DeliveryGuaranteeFailed evnt);
         public event DeliveryGuaranteeFailedHandler DeliveryGuaranteeFailed;

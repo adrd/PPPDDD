@@ -13,7 +13,7 @@ namespace PPPDDDChap23.EventSourcing.Application.Model.PayAsYouGo
         private Money _credit;
         private PayAsYouGoInclusiveMinutesOffer _inclusiveMinutesOffer = new PayAsYouGoInclusiveMinutesOffer(new Money(100000), new Minutes(0));
 
-        public int InitialVersion { get; private set; }
+        public int InitialVersion { get; private set; } // once set, does not change
 
         public PayAsYouGoAccount()
         { }
@@ -26,7 +26,7 @@ namespace PPPDDDChap23.EventSourcing.Application.Model.PayAsYouGo
         public PayAsYouGoAccount(PayAsYouGoAccountSnapshot snapshot)
         {
             Version = snapshot.Version;
-            InitialVersion = snapshot.Version;
+            InitialVersion = snapshot.Version; // once set, does not change
             _credit = new Money(snapshot.Credit);
         }
 

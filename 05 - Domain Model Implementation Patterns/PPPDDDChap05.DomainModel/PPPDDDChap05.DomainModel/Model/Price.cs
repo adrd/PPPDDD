@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PPPDDDChap05.DomainModel.Model
 {
-    public class Price 
+    public class Price
     {
         private Price()
         { }
@@ -21,16 +21,16 @@ namespace PPPDDDChap05.DomainModel.Model
         public Money BidIncrement()
         {
             if (Amount.IsGreaterThanOrEqualTo(new Money(0.01m)) && Amount.IsLessThanOrEqualTo(new Money(0.99m)))
-                    return Amount.Add(new Money(0.05m));
+                return Amount.Add(new Money(0.05m));
 
             if (Amount.IsGreaterThanOrEqualTo(new Money(1.00m)) && Amount.IsLessThanOrEqualTo(new Money(4.99m)))
-                    return Amount.Add(new Money(0.20m));
-                
+                return Amount.Add(new Money(0.20m));
+
             if (Amount.IsGreaterThanOrEqualTo(new Money(5.00m)) && Amount.IsLessThanOrEqualTo(new Money(14.99m)))
-                    return Amount.Add(new Money(0.50m));
+                return Amount.Add(new Money(0.50m));
 
             return Amount.Add(new Money(1.00m));
-            
+
         }
 
         public bool CanBeExceededBy(Money offer)

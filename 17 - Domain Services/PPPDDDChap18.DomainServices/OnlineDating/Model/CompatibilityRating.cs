@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PPPDDDChap18.DomainServices.OnlineDating.Model
 {
+    // value object
     public class CompatibilityRating
     {
         public CompatibilityRating Boost(CompatibilityRating rating)

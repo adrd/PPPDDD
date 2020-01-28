@@ -20,7 +20,7 @@ namespace PPPDDDChap17.Entities.Examples
 
             public Address Address { get; private set; }
 
-            // Only contains methods it actually impelements
+            // Only contains methods it actually implements
             // returns new state so that clients have to be aware of it
             public InOvenOnlineTakeawayOrder Cook()
             {

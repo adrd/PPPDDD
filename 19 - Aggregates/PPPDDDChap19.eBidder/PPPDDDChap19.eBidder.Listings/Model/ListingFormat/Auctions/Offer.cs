@@ -22,7 +22,7 @@ namespace PPPDDDChap19.eBidder.Listings.Model.Auctions
             TimeOfOffer = timeOfOffer;
         }
 
-        public Guid Bidder { get; private set; }
+        public Guid Bidder { get; private set; } // bidder is member id aggregate root
         public Money MaximumBid { get; private set; }
         public DateTime TimeOfOffer { get; private set; }
        

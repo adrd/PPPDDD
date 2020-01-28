@@ -81,7 +81,7 @@ namespace PPPDDDChap23.EventSourcing.Application.Infrastructure
                 Created = DateTime.Now
             };
             
-            _documentSession.Store(snapshot);
+            _documentSession.Store(snapshot); // aici cred ca trebuie sa fie wrapper in loc de snapshot
         }
 
         public T GetLatestSnapshot<T>(string streamName) where T: class

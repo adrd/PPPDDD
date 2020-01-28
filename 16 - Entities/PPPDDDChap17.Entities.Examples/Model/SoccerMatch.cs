@@ -8,7 +8,7 @@ namespace PPPDDDChap17.Entities.Examples
 {
     namespace DataFocused
     {
-        // This is a poorly-designed class. It exposes only data - leading to an anaemic domain model
+        // This is a poorly-designed class. It exposes only data - leading to an anemic domain model
         // In addition, logic for calculating the winner could be erroneously duplicated
         // in other parts of the application
         public class SoccerCupMatch

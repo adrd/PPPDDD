@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PPPDDDChap05.DomainModel.Model
 {
-    public class Bid 
+    public class Bid
     {
         public Bid(Guid bidderId, Money maximumBid, DateTime timeOfOffer)
         {
@@ -24,5 +24,5 @@ namespace PPPDDDChap05.DomainModel.Model
         public Guid Bidder { get; private set; }
         public Money MaximumBid { get; private set; }
         public DateTime TimeOfOffer { get; private set; }
-    }   
+    }
 }

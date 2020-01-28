@@ -5,7 +5,7 @@ namespace DDDPPP.Chap21.NHibernateExample.Application.Model.Auction
 {
     public class Auction : Entity<Guid>
     {
-        private Auction() { }
+        private Auction() { } // needed by NHibernate
 
         public Auction(Guid id, Money startingPrice, DateTime endsAt)
         {

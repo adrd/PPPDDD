@@ -7,10 +7,13 @@ namespace Sales.Orders.OrderCreated
 {
     public class PlaceOrderHandler : IHandleMessages<PlaceOrder>
     {
+        // dependency injected by NServiceBus
         public IBus Bus { get; set; }
 
         public void Handle(PlaceOrder message)
         {
+            //throw new Exception("I have received a poison message");
+
             var orderId = Database.SaveOrder(message.ProductIds, message.UserId, message.ShippingTypeId);
 
             Console.WriteLine(

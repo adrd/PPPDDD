@@ -9,7 +9,7 @@ namespace PPPDDDChap05.TransactionScript.Domain
         public DateTime EndsAt { get; set; }
         public decimal StartingPrice { get; set; }
         public decimal WinningBid { get; set; }
-        public decimal WinninBidderMaximumBid { get; set; }
+        public decimal WinningBidderMaximumBid { get; set; }
         public Guid WinningBidder { get; set; }                    
     }
 }

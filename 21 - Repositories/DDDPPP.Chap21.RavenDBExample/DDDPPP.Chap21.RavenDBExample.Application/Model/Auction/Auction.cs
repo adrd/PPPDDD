@@ -5,7 +5,7 @@ namespace DDDPPP.Chap21.RavenDBExample.Application.Model.Auction
 {
     public class Auction : Entity<Guid>
     {
-        private Auction() { }
+        private Auction() { } // needed by RavenDB
 
         public Auction(Guid id, Money startingPrice, DateTime endsAt)
         {

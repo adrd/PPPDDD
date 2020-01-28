@@ -24,5 +24,15 @@ namespace PPPDDDChap18.DomainServices.OnlineGaming.WithDomainServices.Model
         {
             return new Score(this.Value - amount.Value);
         }
+
+        public static bool operator >(Score left, Score right)
+        {
+            return left.Value > right.Value;
+        }
+
+        public static Boolean operator <(Score left, Score right)
+        {
+            return left.Value < right.Value;
+        }
     }
 }

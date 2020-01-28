@@ -31,7 +31,7 @@ namespace Promotions.LuckyWinner.LuckyWinnerSelected.Bridge
         }
 
         // use a more robust strategy in production
-        // this approach is used to highligh format mass transit needs
+        // this approach is used to highlight format mass transit needs
         private string ConvertToMassTransitXmlMessageFormat(OrderCreated_V2 message)
         {
             return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +

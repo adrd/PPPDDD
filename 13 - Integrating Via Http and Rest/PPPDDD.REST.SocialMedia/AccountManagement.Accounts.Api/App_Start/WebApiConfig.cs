@@ -8,8 +8,12 @@ namespace AccountManagement.Accounts.Api
     {
         public static void Register(HttpConfiguration config)
         {
-            var cors = new EnableCorsAttribute("*", "*", "*");
-            config.EnableCors(cors);
+            // this is not correct as per errata
+            //var cors = new EnableCorsAttribute("*", "*", "*");
+            //config.EnableCors(cors);
+
+            var cors = new EnableCorsAttribute("http://localhost:4100", "*", "*");
+            cors.SupportsCredentials = true; // ???
 
             config.MapHttpAttributeRoutes();
 

@@ -6,7 +6,7 @@ namespace DDDPPP.Chap21.NHibernateExample.Application.Model.Auction
 {
     public class WinningBid : ValueObject<WinningBid>
     {
-        private WinningBid() { }
+        private WinningBid() { } // needed by NHibernate
 
         public WinningBid(Guid bidder, Money maximumBid, Money bid, DateTime timeOfBid)
         {
